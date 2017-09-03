@@ -1,0 +1,64 @@
+@import '../../styles/foundation';
+
+.bio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bio__avatar {
+  flex: 0 1 220px;
+  margin-right: 5rem;
+  margin-top: 3rem;
+
+  img {
+    max-width: 100%;
+    border-radius: 50%;
+  }
+}
+
+.bio__copy {
+  flex: 1 1 500px;
+}
+
+.bio__intro {
+  font-size: 2.8rem;
+  display: block;
+}
+
+.bio__lead {
+  font-family: $font-family-headline;
+  font-size: 9rem;
+  font-weight: 700;
+  display: block;
+}
+
+.bio__links {
+  flex: 1 1 100%;
+  display: flex;
+}
+
+.bio__link {
+  &:hover {
+    color: darken($color-body, 10%);
+  }
+
+  + .bio__link {
+    margin-left: 1.8rem;
+  }
+}
+
+.bio--condensed {
+  .bio__avatar {
+    flex: 0 1 110px;
+    margin-top: 1rem;
+    margin-right: 2rem;
+  }
+
+  .bio__lead {
+    font-size: 3rem;
+  }
+
+  .bio__intro {
+    font-size: 1.8rem;
+  }
+}

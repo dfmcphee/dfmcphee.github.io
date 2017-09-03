@@ -1,0 +1,75 @@
+html {
+  font-family: $font-family-body;
+  font-size: (10px / 16px) * 100%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: $color-body;
+}
+
+$link-underline-size: 1px;
+
+a,
+a:visited {
+  color: $color-body-subdued;
+  transition: color 200ms ease-in-out;
+  text-decoration-skip: ink;
+}
+
+a:hover {
+  color: darken($color-body-subdued, 5%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-headline;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-size: 2.6rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+}
+
+blockquote {
+  border-left: 4px solid $color-accent;
+  padding: 0 2.4rem;
+  margin: 0;
+  font-size: 3.2rem;
+}
+
+code {
+  padding: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+pre {
+  code {
+    font-size: 1em;
+    font-weight: normal;
+  }
+}

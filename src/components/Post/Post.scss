@@ -1,0 +1,36 @@
+@import '../../styles/foundation';
+
+.post {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post__header {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2.4rem;
+}
+
+.post__title {
+  flex: 1 1 50rem;
+  margin: 0;
+
+  @media (min-width: 700px) {
+    text-align: left;
+  }
+}
+
+.post__date {
+  flex: 0 1 15rem;
+  font-size: 2.8rem;
+  margin-left: 3.2rem;
+  text-align: right;
+}
+
+.post__content {
+  font-size: 2.2rem;
+  line-height: 3.6rem;
+  min-width: 0;
+}

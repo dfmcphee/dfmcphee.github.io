@@ -1,0 +1,36 @@
+@import '../../styles/foundation';
+
+.button {
+  display: inline-flex;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: $color-body-subdued;
+  padding: 0.8rem 1.6rem 0.8rem 0.8rem;
+  font-family: $font-family-body;
+  border-radius: 0.4rem;
+  transition: background-color 280ms ease-in;
+  border: 2px solid currentColor;
+  
+  &:visited {
+    color: $color-body-subdued;
+  }
+
+  &:hover,
+  &:focus {
+    color: darken($color-body-subdued, 10%);
+  }
+}
+
+.button--large {
+  font-size: 3.2rem;
+}
+
+.button--round {
+  border-radius: 99999px;
+  padding: 0.8rem;
+}
+
+.button--invisible {
+  border: 0;
+  padding: 0;
+}
