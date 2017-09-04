@@ -32,26 +32,32 @@ h6 {
 
 h1 {
   font-size: 6rem;
+  line-height: 7rem;
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 4rem;
+  line-height: 5rem;
 }
 
 h3 {
   font-size: 3rem;
+  line-height: 3.8rem;
 }
 
 h4 {
   font-size: 2.6rem;
+  line-height: 3.2rem;
 }
 
 h5 {
   font-size: 2rem;
+  line-height: 2.8rem;
 }
 
 h6 {
   font-size: 1.8rem;
+  line-height: 2.4rem;
 }
 
 blockquote {
@@ -83,20 +89,20 @@ pre {
   position: absolute;
 }
 
-.example-enter {
+.page-enter {
   opacity: 0.01;
 }
 
-.example-enter.example-enter-active {
+.page-enter.page-enter-active {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
 
-.example-leave {
+.page-leave {
   opacity: 1;
 }
 
-.example-leave.example-leave-active {
+.page-leave.page-leave-active {
   opacity: 0.01;
   transition: opacity 300ms ease-in;
 }

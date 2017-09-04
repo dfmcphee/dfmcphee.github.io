@@ -48,7 +48,7 @@ class Template extends React.Component {
         <ReactCSSTransitionGroup
           component="div"
           className="transition-group"
-          transitionName="example"
+          transitionName="page"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={300}
         >
