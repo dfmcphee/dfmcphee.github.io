@@ -1,19 +1,6 @@
 @import '../../styles/foundation';
 
 .container {
-  display: flex;
-  flex-direction: column;
   max-width: 90rem;
   margin: 0 auto;
-  padding: 2.6rem;
-  align-items: flex-start;
-}
-
-.container__header {
-  margin: 3.2rem 0;
-}
-
-.container__content {
-  max-width: 100%;
-  min-width: 0;
 }

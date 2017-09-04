@@ -6,24 +6,11 @@ import './Container.scss';
 
 class Container extends React.Component {
   render() {
-    const {condensed, header, content} = this.props;
-
-    const containerClassNames = classNames('container', {
-      'container--condensed': condensed
-    });
-
-    const headerMarkup = header ? (
-      <div className="container__header">
-        {header}
-      </div>
-    ) : null;
+    const {children} = this.props;
 
     return (
-      <div className={containerClassNames}>
-        {headerMarkup}
-        <div className="container__content">
-          {content}
-        </div>
+      <div className="container">
+        {children}
       </div>
     )
   }
