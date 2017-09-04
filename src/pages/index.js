@@ -2,8 +2,6 @@ import React from "react";
 import get from "lodash/get";
 import Helmet from "react-helmet";
 
-import InstagramEmbed from 'react-instagram-embed';
-
 import Bio from '../components/Bio';
 import Post from '../components/Post';
 import Index from '../components/Index';
