@@ -1,0 +1,10 @@
+@import '../../styles/foundation';
+
+.index {
+  display: flex;
+  flex-direction: column;
+
+  > * + * {
+    margin-top: 6.4rem;
+  }
+}

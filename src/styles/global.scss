@@ -12,13 +12,13 @@ $link-underline-size: 1px;
 
 a,
 a:visited {
-  color: $color-body-subdued;
+  color: $color-body;
   transition: color 200ms ease-in-out;
   text-decoration-skip: ink;
 }
 
 a:hover {
-  color: darken($color-body-subdued, 5%);
+  color: darken($color-body, 5%);
 }
 
 h1,
@@ -59,6 +59,7 @@ blockquote {
   padding: 0 2.4rem;
   margin: 0;
   font-size: 3.2rem;
+  line-height: 4rem;
 }
 
 code {

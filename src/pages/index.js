@@ -6,6 +6,8 @@ import Helmet from "react-helmet";
 import InstagramEmbed from 'react-instagram-embed';
 
 import Bio from '../components/Bio';
+import Post from '../components/Post';
+import Index from '../components/Index';
 
 class BlogIndex extends React.Component {
   render() {
@@ -16,25 +18,24 @@ class BlogIndex extends React.Component {
       <div>
         <Helmet title={get(this, "props.data.site.siteMetadata.title")} />
         <Bio />
-        {posts.map(post => {
-          if (post.node.path !== "/404/") {
-            const title = get(post, "node.frontmatter.title") || post.node.path
-            return (
-              <div key={post.node.frontmatter.path}>
-                <h2>
-                  <Link to={post.node.frontmatter.path}>
-                    {post.node.frontmatter.title}
-                  </Link>
-                </h2>
-                <small>
-                  {post.node.frontmatter.date}
-                </small>
-                <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-              </div>
-            )
-          }
-        })}
-        
+        <Index>
+          {posts.map(post => {
+            if (post.node.path !== "/404/") {
+              const title = get(post, "node.frontmatter.title") || post.node.path
+              return (
+                <div key={post.node.frontmatter.path}>
+                  <Post
+                    condensed
+                    link={post.node.frontmatter.path}
+                    title={post.node.frontmatter.title}
+                    date={post.node.frontmatter.date}
+                    content={post.node.excerpt}
+                  />
+                </div>
+              )
+            }
+          })}
+        </Index>
       </div>
     )
   }

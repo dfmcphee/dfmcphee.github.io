@@ -1,6 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet'
-import Link from 'gatsby-link';
+import Helmet from 'react-helmet';
 
 import Button from '../components/Button';
 import Icon from '../components/Icon';
@@ -30,7 +29,7 @@ class Template extends React.Component {
           <link href="https://fonts.googleapis.com/css?family=Fauna+One|Playfair+Display:900" rel="stylesheet" />
         </Helmet>
         <Container
-          header={null}
+          header={header}
           content={children()}
         />
       </div>
@@ -43,4 +42,4 @@ Template.propTypes = {
   route: React.PropTypes.object,
 }
 
-export default Template
+export default Template;

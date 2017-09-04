@@ -8,7 +8,7 @@
   padding: 0.8rem 1.6rem 0.8rem 0.8rem;
   font-family: $font-family-body;
   border-radius: 0.4rem;
-  transition: background-color 280ms ease-in;
+  transition: background-color color 280ms ease-in;
   border: 2px solid currentColor;
   
   &:visited {
@@ -30,7 +30,15 @@
   padding: 0.8rem;
 }
 
+$button-invisble-color: rgba($color-body-subdued, 0.3);
+
 .button--invisible {
   border: 0;
   padding: 0;
+  color: $button-invisble-color;
+
+  &:hover,
+  &:focus {
+    color: darken($button-invisble-color, 20%);
+  }
 }

@@ -1,0 +1,9 @@
+$base-rem-size: 10px;
+
+@function px($value) {
+  @if unit($value) != 'rem' {
+    @error 'Value must be in rem.';
+  }
+
+  @return ($value / 1rem) * $base-rem-size;
+}

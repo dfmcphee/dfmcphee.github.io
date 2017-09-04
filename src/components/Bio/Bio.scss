@@ -1,18 +1,27 @@
 @import '../../styles/foundation';
 
+$bio-condensed-breakpoint: px(70rem);
+
 .bio {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 3.2rem;
 }
 
 .bio__avatar {
-  flex: 0 1 220px;
+  flex: 1 1 100%;
   margin-right: 5rem;
   margin-top: 3rem;
+  margin-bottom: 3rem;
 
   img {
     max-width: 100%;
     border-radius: 50%;
+  }
+
+  @media (min-width: $bio-condensed-breakpoint) {
+    flex: 0 1 220px;
+    margin-bottom: 0;
   }
 }
 
@@ -27,9 +36,13 @@
 
 .bio__lead {
   font-family: $font-family-headline;
-  font-size: 9rem;
+  font-size: 4rem;
   font-weight: 700;
   display: block;
+
+  @media (min-width: $bio-condensed-breakpoint) {
+    font-size: 9rem;
+  }
 }
 
 .bio__links {
@@ -51,7 +64,7 @@
   .bio__avatar {
     flex: 0 1 110px;
     margin-top: 1rem;
-    margin-right: 2rem;
+    margin-right: 3.2rem;
   }
 
   .bio__lead {

@@ -1,11 +1,12 @@
 import React from 'react'
 import classNames from 'classnames';
+import Link from 'gatsby-link';
 
 import './Post.scss';
 
 class Post extends React.Component {
   render() {
-    const {condensed, title, date, content} = this.props;
+    const {condensed, title, date, content, link} = this.props;
     const postClassNames = classNames('post', {
       'post--condensed': condensed
     });
@@ -14,14 +15,24 @@ class Post extends React.Component {
     const lastWord = titleArray.pop();
     const secondLastWord = titleArray.pop();
 
+    const titleMarkup = link ? (
+      <h2 className="post__title">
+        <Link to={link}>
+          {titleArray.join(' ')} {secondLastWord}&nbsp;{lastWord}
+        </Link>
+      </h2>
+    ) : (
+      <h1 className="post__title">
+        {titleArray.join(' ')} {secondLastWord}&nbsp;{lastWord}
+      </h1>
+    );
+
     return (
       <div className={postClassNames}>
         <div className="post__header">
-          <h1 className="post__title">
-            {titleArray.join(' ')} {secondLastWord}&nbsp;{lastWord}
-          </h1>
+          {titleMarkup}
           <p className="post__date">
-            <time datetime={date}>
+            <time dateTime={date}>
               {date}
             </time>
           </p>
