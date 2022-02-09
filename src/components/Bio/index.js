@@ -27,7 +27,7 @@ class Bio extends React.Component {
             Hello,
           </span>
           <p className="bio__intro">
-            My name is Dominic. I'm a front-end developer working at Shopify in Ottawa, Canada. I work on Shopify's design system, Polaris. I love to build, explore, and tinker.
+            My name is Dominic. I'm a front-end developer. I love to build, explore, and tinker.
           </p>
           <div className="bio__links">
             <a href="https://twitter.com/dfmcphee" className="bio__link">
@@ -35,7 +35,7 @@ class Bio extends React.Component {
               <Icon src={twitterIcon} {...iconProps} />
             </a>
             <a href="https://instagram.com/dfmcphee" className="bio__link">
-              <VisuallyHidden>instagram</VisuallyHidden>
+              <VisuallyHidden>Instagram</VisuallyHidden>
               <Icon src={instagramIcon} {...iconProps} />
             </a>
             <a href="https://github.com/dfmcphee" className="bio__link">
